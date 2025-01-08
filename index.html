@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social links profile</title>
+    <link rel="stylesheet" href="prfile.css">
+</head>
+<body>
+    <div class="card">
+        <img src="./assets/images/128583570.jpeg" alt="Profile Picture" class="profile-img">
+        <h1>Michael Sunmisola</h1>
+        <p class="location">Lagos, Nigeria</p>
+        <p class="bio">"Front-end developer and Machine learning engineer."</p>
+        
+        <div class="social-links">
+            <a href="https://github.com/spade-codee" class="social-link scroll-reveal">GitHub</a>
+            <a href="https://www.frontendmentor.io/profile/spade-codee" class="social-link scroll-reveal">Frontend Mentor</a>
+            <a href="https://www.linkedin.com/in/michael-sunmisola-630b2b268/" class="social-link scroll-reveal">LinkedIn</a>
+            <a href="https://x.com/michael13467518?t=ybLbAAn3xyc-4_1euR1QsA&s=08" class="social-link scroll-reveal">Twitter</a>
+            <a href="https://www.instagram.com/mic.haelo1?igsh=MTdlOXd2dmRoeHc3aw==" class="social-link scroll-reveal">Instagram</a>
+        </div>
+    </div>
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Sunmisola</a>.
+    </div>
+
+    <script>
+        // Simple scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
